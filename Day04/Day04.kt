@@ -49,7 +49,7 @@ fun solvePart2(input: List<String>, muchAsCan: Boolean = true): Int {
         if (newResult == result) {
             return result
         } else {
-            if (muchAsCan) return newResult
+            if (muchAsCan.not()) return newResult
             result = newResult
         }
 
