@@ -30,10 +30,10 @@ fun resolvePart2(input: List<String>): Long {
                 if (input[row][col] == '^' && currentTimelineBeams[col] > 0) {
                     val left = col - 1
                     val right = col + 1
-                    val timelinesHere = currentTimelineBeams[col]
+                    val currentTimelineBeam = currentTimelineBeams[col]
 
-                    currentTimelineBeams[left] = currentTimelineBeams[left] + timelinesHere
-                    currentTimelineBeams[right] = currentTimelineBeams[right] + timelinesHere
+                    currentTimelineBeams[left] = currentTimelineBeams[left] + currentTimelineBeam
+                    currentTimelineBeams[right] = currentTimelineBeams[right] + currentTimelineBeam
 
                     currentTimelineBeams[col] = 0L
                     changed = true
